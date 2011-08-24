@@ -1,0 +1,13 @@
+## Interface: 40200
+## Title: AA Test
+## Author: cgiguy
+## Version: 1.0
+## Notes: Test Harness
+## DefaultState: Disabled
+## LoadOnDemand: 0
+## SavedVariables: AATest
+AATestAbout.lua
+AATestOptions.lua
+AATestOptions.xml
+AATestResources.lua
+AATest.lua

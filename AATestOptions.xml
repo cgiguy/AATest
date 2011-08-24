@@ -1,0 +1,452 @@
+ <Ui xmlns="http://www.blizzard.com/wow/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FontString name="AATestLabelTemplate" virtual="true" font="Fonts\FRIZQT__.TTF" text="XXXXX">
+    <Size>
+      <AbsDimension x="200" y="15" />
+    </Size>
+    <FontHeight>
+      <AbsValue val="11" />
+    </FontHeight>
+    <Color r="1" g="0.8196079" b="0" />
+    <Shadow>
+      <Color r="0" g="0" b="0" />
+      <Offset>
+	<AbsDimension x="1" y="-1" />
+      </Offset>
+    </Shadow>
+  </FontString>
+
+  <Button name="AATestButtonTemplate" virtual="true" text="XXXXX">
+    <Size>
+      <AbsDimension x="75" y="22" />
+    </Size>
+    <NormalTexture file="Interface\Buttons\UI-Panel-Button-Up">
+      <TexCoords left="0" right="0.625" top="0" bottom="0.6875" />
+    </NormalTexture>
+    <PushedTexture file="Interface\Buttons\UI-Panel-Button-Down">
+      <TexCoords left="0" right="0.625" top="0" bottom="0.6875" />
+    </PushedTexture>
+    <DisabledTexture file="Interface\Buttons\UI-Panel-Button-Disabled">
+      <TexCoords left="0" right="0.625" top="0" bottom="0.6875" />
+    </DisabledTexture>
+    <HighlightTexture file="Interface\Buttons\UI-Panel-Button-Highlight" alphaMode="ADD">
+      <TexCoords left="0" right="0.625" top="0" bottom="0.6875" />
+    </HighlightTexture>
+    <ButtonText name="$parentText">
+      <FontHeight>
+	<AbsValue val="10" />
+      </FontHeight>
+    </ButtonText>
+    <NormalFont style="GameFontNormal" />
+    <HighlightFont style="GameFontHighlight" />
+    <DisabledFont style="GameFontDisable" />
+  </Button>
+
+  <CheckButton name="AATestCheckButtonTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="20" y="20" />
+    </Size>
+    <NormalTexture file="Interface\Buttons\UI-CheckBox-Up" />
+    <PushedTexture file="Interface\Buttons\UI-CheckBox-Down" />
+    <HighlightTexture file="Interface\Buttons\UI-CheckBox-Highlight" alphaMode="ADD" />
+    <CheckedTexture file="Interface\Buttons\UI-CheckBox-Check" />
+    <DisabledCheckedTexture file="Interface\Buttons\UI-CheckBox-Check-Disabled" />
+  </CheckButton>
+  <FontString name="AATestCheckButtonLabelTemplate" justifyH="LEFT" font="Fonts\FRIZQT__.TTF" virtual="true">
+    <Anchors>
+      <Anchor point="LEFT" relativeTo="$parent" relativePoint="RIGHT">
+	<Offset>
+	  <AbsDimension x="0" y="0" />
+	</Offset>
+      </Anchor>
+    </Anchors>
+    <FontHeight>
+      <AbsValue val="10" />
+    </FontHeight>
+    <Color r="1" g="0.8196079" b="0" />
+    <Shadow>
+      <Color r="0" g="0" b="0" />
+      <Offset>
+	<AbsDimension x="1" y="-1" />
+      </Offset>
+    </Shadow>
+  </FontString>
+
+  <EditBox name="AATestEditBoxTemplate"  virtual="true" enableMouse="true" autoFocus="false">
+    <Size><AbsDimension x="50" y="15" /></Size>
+    <Layers><Layer level="BACKGROUND">
+      <Texture name="$parentLeft" file="Interface\Common\Common-Input-Border">
+	<Size><AbsDimension x="8" y="20" /></Size>
+	<Anchors><Anchor point="LEFT" /></Anchors>
+	<TexCoords left="0" right="0.0625" top="0" bottom="0.625" />
+      </Texture>
+      <Texture name="$parentRight" file="Interface\Common\Common-Input-Border">
+	<Size><AbsDimension x="8" y="20" /></Size>
+	<Anchors><Anchor point="RIGHT" /></Anchors>
+	<TexCoords left="0.9375" right="1" top="0" bottom="0.625" />
+      </Texture>
+      <Texture name="$parentMiddle" file="Interface\Common\Common-Input-Border">
+	<Size><AbsDimension x="10" y="20" /></Size>
+	<Anchors><Anchor point="LEFT" relativeTo="$parentLeft" relativePoint="RIGHT" /><Anchor point="RIGHT" relativeTo="$parentRight" relativePoint="LEFT" /></Anchors>
+	<TexCoords left="0.0625" right="0.9375" top="0" bottom="0.625" />
+      </Texture>
+    </Layer></Layers>
+    <FontString font="Fonts\ARIALN.TTF" justifyH="CENTER" justifyV="CENTER">
+      <FontHeight><AbsValue val="12" /></FontHeight>
+      <Color r="1" g="1" b="1" />
+      <Shadow><Color r="0" g="0" b="0" /><Offset><AbsDimension x="1" y="-1" /></Offset></Shadow>
+    </FontString>
+  </EditBox>
+
+  <Slider name="AATestSliderTemplate"  virtual="true" enableMouse="true" minValue="-400" maxValue="400" defaultValue="0" valueStep="1" orientation="HORIZONTAL">
+    <Size><AbsDimension x="128" y="17" /></Size>
+    <Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+      <BackgroundInsets><AbsInset left="3" right="3" top="6" bottom="6" /></BackgroundInsets>
+      <TileSize><AbsValue val="8" /></TileSize>
+      <EdgeSize><AbsValue val="8" /></EdgeSize>
+    </Backdrop>
+    <ThumbTexture name="$parentThumb" file="Interface\Buttons\UI-SliderBar-Button-Horizontal"><Size><AbsDimension x="32" y="32" /></Size></ThumbTexture>
+  </Slider>
+  <FontString name="AATestSliderLabelTemplate" inherits="AATestLabelTemplate" virtual="true">
+    <Anchors><Anchor point="BOTTOM" relativePoint="TOP"><Offset><AbsDimension x="0" y="0" /></Offset></Anchor></Anchors>
+    <FontHeight><AbsValue val="10" /></FontHeight>
+    <Color r="1" g="0.8196079" b="0" />
+    <Shadow><Color r="0" g="0" b="0" /><Offset><AbsDimension x="1" y="-1" /></Offset></Shadow>
+  </FontString>
+
+  <Frame name="AATestContainerFrameTemplate" virtual="true">
+    <Size><AbsDimension x="414" y="357"/></Size>
+    <Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+      <EdgeSize><AbsValue val="16"/></EdgeSize>
+      <TileSize><AbsValue val="16"/></TileSize>
+    <BackgroundInsets><AbsInset left="5" right="5" top="5" bottom="5"/></BackgroundInsets></Backdrop>
+  </Frame>
+
+  <Frame name="AATestPopupFrameTemplate" frameStrata="DIALOG" enableMouse="true" movable="true" hidden="true" virtual="true">
+    <Size><AbsDimension x="400" y="150" /></Size>
+    <Anchors><Anchor point="CENTER" relativeTo="UIParent" relativePoint="CENTER"><Offset><AbsDimension x="0" y="0" /></Offset></Anchor></Anchors>
+    <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background-Dark" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+      <BackgroundInsets><AbsInset left="11" right="12" top="12" bottom="11" /></BackgroundInsets>
+      <TileSize><AbsValue val="32" /></TileSize>
+      <EdgeSize><AbsValue val="32" /></EdgeSize>
+    </Backdrop>
+    <Layers><Layer>
+      <Texture name="$parentTitleBorder" hidden="true" file="Interface\DialogFrame\UI-DialogBox-Header">
+	<Size>
+	  <AbsDimension x="160" y="32" />
+	</Size>
+	<Anchors>
+	  <Anchor point="TOP">
+	    <Offset>
+	      <AbsDimension x="0" y="5" />
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+	<TexCoords left="0.2" right="0.8" top="0" bottom="0.6" />
+      </Texture>
+      <FontString name="$parentTitleString" hidden="true" font="Fonts\FRIZQT__.TTF">
+	<Size><AbsDimension x="140" y="0" /></Size><Anchors><Anchor point="TOP"><Offset><AbsDimension x="0" y="-4" /></Offset></Anchor></Anchors>
+	<FontHeight><AbsValue val="12" /></FontHeight><Color r="1" g="0.8196079" b="0" /><Shadow><Color r="0" g="0" b="0" /><Offset><AbsDimension x="1" y="-1" /></Offset></Shadow>
+      </FontString>
+    </Layer></Layers>
+  </Frame>
+
+  <Frame name="AATestOptionsAboutFrame" hidden="true">
+    <Frames>
+      <Frame name="AATestOptionsAboutLabel">
+	<Size><AbsDimension x="400" y="21" /></Size>
+	<Anchors><Anchor point="TOP"><Offset><AbsDimension x="0" y="-10" /></Offset></Anchor></Anchors>
+	<Layers><Layer>
+	  <FontString name="$parentLabel" font="Fonts\FRIZQT__.TTF" justifyH="CENTER" text="AA Test">
+	    <Size><AbsDimension x="400" y="21" /></Size>
+	    <Anchors><Anchor point="TOP"><Offset><AbsDimension x="0" y="0" /></Offset></Anchor></Anchors>
+	    <FontHeight><AbsValue val="14" /></FontHeight><Color r="1" g="0.8196079" b="0" /><Shadow><Color r="0" g="0" b="0" /><Offset><AbsDimension x="1" y="-1" /></Offset></Shadow>
+	  </FontString>
+	</Layer></Layers>
+      </Frame>
+      <ScrollFrame name="AATestAboutScrollFrame" inherits="UIPanelScrollFrameTemplate">
+	<Size><AbsDimension x="350" y="350" /></Size>
+	<Anchors><Anchor point="TOP" relativeTo="AATestOptionsAboutLabel" relativePoint="BOTTOM"><Offset><AbsDimension x="-10" y="-5" /></Offset></Anchor></Anchors>
+	<ScrollChild><Frame name="$parentScrollChild">
+	  <Size><AbsDimension x="340" y="600"/></Size>
+	  <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="0" /></Offset></Anchor></Anchors>
+	</Frame></ScrollChild>
+      </ScrollFrame>			
+      <Button name="AATestResetAllVariablesButton" inherits="AATestButtonTemplate" text="Reset All Variables">
+	<Size><AbsDimension x="140" y="22" /></Size>
+	<Anchors><Anchor point="BOTTOMRIGHT" relativeTo="AATestOptionsAboutFrame" relativePoint="BOTTOMRIGHT"><Offset><AbsDimension x="-10" y="10" /></Offset></Anchor></Anchors>
+	<Scripts>
+	  <OnClick>AATestResetAllVariables()</OnClick>
+	  <OnEnter>AATestToolTips["Enter"](self, "Clicking this button and confirming in the resulting dialog box will RESET ALL of your AATest options.")</OnEnter>
+	  <OnLeave>AATestToolTips["Leave"]()</OnLeave>
+	</Scripts>
+      </Button>
+      <Button name="AATestMakeInterfaceOptionsMovableButton" inherits="AATestButtonTemplate" text="Move Options Frame">
+	<Size><AbsDimension x="140" y="22" /></Size>
+	<Anchors><Anchor point="RIGHT" relativeTo="AATestResetAllVariablesButton" relativePoint="LEFT"><Offset><AbsDimension x="-5" y="0" /></Offset></Anchor></Anchors>
+	<Scripts>
+	  <OnClick>
+	    InterfaceOptionsFrame:SetMovable(true)
+	    InterfaceOptionsFrame:EnableMouse(true)
+	    InterfaceOptionsFrame:SetScript("OnMouseDown", InterfaceOptionsFrame.StartMoving)
+	    InterfaceOptionsFrame:SetScript("OnMouseUp", InterfaceOptionsFrame.StopMovingOrSizing)
+	  </OnClick>
+	  <OnEnter>AATestToolTips["Enter"](self, "This is just a handy button that will make the full Interface-Options frame movable by dragging the frame with the mouse, so you can move the frame out of the way to set up things under it.")</OnEnter>
+	  <OnLeave>AATestToolTips["Leave"]()</OnLeave>
+	</Scripts>
+      </Button>
+    </Frames>
+    <Scripts><OnLoad>AATestOptionsAboutLabelLabel:SetText("AA Test version " .. GetAddOnMetadata("AATest", "Version") .. " by cgiguy")</OnLoad></Scripts>
+  </Frame>
+
+  <Frame name="AATestOptionsFrame" hidden="true">
+    <Layers>
+      <Layer>
+	  <FontString name="$parentLabel1" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" text="Top Left">
+	    <!-- <Size><AbsDimension x="600" y="21" /></Size> -->
+	    <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="0" /></Offset></Anchor></Anchors>
+	    <FontHeight><AbsValue val="14" /></FontHeight><Color r="1" g="0.8196079" b="0" /><Shadow><Color r="0" g="0" b="0" /><Offset><AbsDimension x="1" y="-1" /></Offset></Shadow>
+	  </FontString>
+	  <FontString name="$parentLabel2" font="Fonts\FRIZQT__.TTF" justifyH="CENTER" text="Top Center">
+	    <!-- <Size><AbsDimension x="600" y="21" /></Size> -->
+	    <Anchors><Anchor point="TOP"><Offset><AbsDimension x="0" y="0" /></Offset></Anchor></Anchors>
+	    <FontHeight><AbsValue val="14" /></FontHeight><Color r="1" g="0.8196079" b="0" /><Shadow><Color r="0" g="0" b="0" /><Offset><AbsDimension x="1" y="-1" /></Offset></Shadow>
+	  </FontString>
+	  <FontString name="$parentLabel3" font="Fonts\FRIZQT__.TTF" justifyH="RIGHT" text="Top Right">
+	    <!-- <Size><AbsDimension x="600" y="21" /></Size> -->
+	    <Anchors><Anchor point="TOPRIGHT"><Offset><AbsDimension x="0" y="0" /></Offset></Anchor></Anchors>
+	    <FontHeight><AbsValue val="14" /></FontHeight><Color r="1" g="0.8196079" b="0" /><Shadow><Color r="0" g="0" b="0" /><Offset><AbsDimension x="1" y="-1" /></Offset></Shadow>
+	  </FontString>
+	  <FontString name="$parentLabel4" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" text="Left Center">
+	    <!-- <Size><AbsDimension x="600" y="21" /></Size> -->
+	    <Anchors><Anchor point="LEFT"><Offset><AbsDimension x="0" y="0" /></Offset></Anchor></Anchors>
+	    <FontHeight><AbsValue val="14" /></FontHeight><Color r="1" g="0.8196079" b="0" /><Shadow><Color r="0" g="0" b="0" /><Offset><AbsDimension x="1" y="-1" /></Offset></Shadow>
+	  </FontString>
+	  <FontString name="$parentLabel5" font="Fonts\FRIZQT__.TTF" justifyH="CENTER" text="Center">
+	    <!-- <Size><AbsDimension x="600" y="21" /></Size> -->
+	    <Anchors><Anchor point="CENTER"><Offset><AbsDimension x="0" y="0" /></Offset></Anchor></Anchors>
+	    <FontHeight><AbsValue val="14" /></FontHeight><Color r="1" g="0.8196079" b="0" /><Shadow><Color r="0" g="0" b="0" /><Offset><AbsDimension x="1" y="-1" /></Offset></Shadow>
+	  </FontString>
+	  <FontString name="$parentLabel6" font="Fonts\FRIZQT__.TTF" justifyH="RIGHT" text="Right Center">
+	    <!-- <Size><AbsDimension x="600" y="21" /></Size> -->
+	    <Anchors><Anchor point="RIGHT"><Offset><AbsDimension x="0" y="0" /></Offset></Anchor></Anchors>
+	    <FontHeight><AbsValue val="14" /></FontHeight><Color r="1" g="0.8196079" b="0" /><Shadow><Color r="0" g="0" b="0" /><Offset><AbsDimension x="1" y="-1" /></Offset></Shadow>
+	  </FontString>
+	  <FontString name="$parentLabel7" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" text="Bottom Left">
+	    <!-- <Size><AbsDimension x="600" y="21" /></Size> -->
+	    <Anchors><Anchor point="BOTTOMLEFT"><Offset><AbsDimension x="0" y="0" /></Offset></Anchor></Anchors>
+	    <FontHeight><AbsValue val="14" /></FontHeight><Color r="1" g="0.8196079" b="0" /><Shadow><Color r="0" g="0" b="0" /><Offset><AbsDimension x="1" y="-1" /></Offset></Shadow>
+	  </FontString>
+	  <FontString name="$parentLabel8" font="Fonts\FRIZQT__.TTF" justifyH="CENTER" text="Bottom Center">
+	    <!-- <Size><AbsDimension x="600" y="21" /></Size> -->
+	    <Anchors><Anchor point="BOTTOM"><Offset><AbsDimension x="0" y="0" /></Offset></Anchor></Anchors>
+	    <FontHeight><AbsValue val="14" /></FontHeight><Color r="1" g="0.8196079" b="0" /><Shadow><Color r="0" g="0" b="0" /><Offset><AbsDimension x="1" y="-1" /></Offset></Shadow>
+	  </FontString>
+	  <FontString name="$parentLabel9" font="Fonts\FRIZQT__.TTF" justifyH="RIGHT" text="Bottom Right">
+	    <!-- <Size><AbsDimension x="600" y="21" /></Size> -->
+	    <Anchors><Anchor point="BOTTOMRIGHT"><Offset><AbsDimension x="0" y="0" /></Offset></Anchor></Anchors>
+	    <FontHeight><AbsValue val="14" /></FontHeight><Color r="1" g="0.8196079" b="0" /><Shadow><Color r="0" g="0" b="0" /><Offset><AbsDimension x="1" y="-1" /></Offset></Shadow>
+	  </FontString>
+      </Layer>
+    </Layers>
+  </Frame>
+
+  <Frame name="AATestOptionsSoundFrame" hidden="true">
+    <Frames>
+      <!-- Main Frame Selection Combo Button and Related Buttons -->
+      <Button name="AATestOptionsSoundFrameRAVButton" inherits="AATestButtonTemplate" text="Reset All Variables">
+	<Size><AbsDimension x="140" y="22" /></Size>
+	<Anchors><Anchor point="BOTTOMRIGHT" relativeTo="AATestOptionsSoundFrame" relativePoint="BOTTOMRIGHT"><Offset><AbsDimension x="-10" y="10" /></Offset></Anchor></Anchors>
+	<Scripts>
+	  <OnClick>AATestResetAllVariables()</OnClick>
+	  <OnEnter>AATestToolTips["Enter"](self, "Clicking this button is just FUN!  Whee!!.")</OnEnter>
+	  <OnLeave>AATestToolTips["Leave"]()</OnLeave>
+	</Scripts>
+      </Button>
+
+      <Button name="AATestFrameSelectComboButton">
+	<Size>
+	  <AbsDimension x="350" y="32" />
+	</Size>
+	<Anchors>
+	  <Anchor point="TOPLEFT">
+	    <Offset>
+	      <AbsDimension x="0" y="0" />
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+	<Layers><Layer>
+	  <Texture name="$parentLeft" file="Interface\Glues\CharacterCreate\CharacterCreate-LabelFrame"><Size><AbsDimension x="25" y="64" /></Size><Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="13" /></Offset></Anchor></Anchors><TexCoords left="0" right="0.1953125" top="0" bottom="1" /></Texture>
+	  <Texture name="$parentMiddle" file="Interface\Glues\CharacterCreate\CharacterCreate-LabelFrame"><Size><AbsDimension x="270" y="64" /></Size><Anchors><Anchor point="LEFT" relativeTo="$parentLeft" relativePoint="RIGHT" /></Anchors><TexCoords left="0.1953125" right="0.8046875" top="0" bottom="1" /></Texture>
+	  <Texture name="$parentRight" file="Interface\Glues\CharacterCreate\CharacterCreate-LabelFrame"><Size><AbsDimension x="25" y="64" /></Size><Anchors><Anchor point="LEFT" relativeTo="$parentMiddle" relativePoint="RIGHT" /></Anchors><TexCoords left="0.8046875" right="1" top="0" bottom="1" /></Texture>
+
+	  <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Select a WARNING Sound..." justifyH="RIGHT">
+	    <Size><AbsDimension x="245" y="10" /></Size><Anchors><Anchor point="RIGHT" relativeTo="$parentRight"><Offset><AbsDimension x="-43" y="2" /></Offset></Anchor></Anchors>
+	    <FontHeight><AbsValue val="10" /></FontHeight><Color r="1" g="1" b="1" /><Shadow><Color r="0" g="0" b="0" /><Offset><AbsDimension x="1" y="-1" /></Offset></Shadow>
+	  </FontString>
+	</Layer></Layers>
+	<Frames><Button name="$parentButton">
+	  <Size><AbsDimension x="24" y="24" /></Size>
+	  <Anchors><Anchor point="TOPRIGHT" relativeTo="$parentRight"><Offset><AbsDimension x="-16" y="-18" /></Offset></Anchor></Anchors>
+	  <Scripts><OnClick>ToggleDropDownMenu(1, nil, self:GetParent()); PlaySound("igMainMenuOptionCheckBoxOn")</OnClick></Scripts>
+	  <NormalTexture name="$parentNormalTexture" file="Interface\ChatFrame\UI-ChatIcon-ScrollDown-Up"><Size><AbsDimension x="24" y="24" /></Size><Anchors><Anchor point="RIGHT" /></Anchors></NormalTexture>
+	  <PushedTexture name="$parentPushedTexture" file="Interface\ChatFrame\UI-ChatIcon-ScrollDown-Down"><Size><AbsDimension x="24" y="24" /></Size><Anchors><Anchor point="RIGHT" /></Anchors></PushedTexture>
+	  <DisabledTexture name="$parentDisabledTexture" file="Interface\ChatFrame\UI-ChatIcon-ScrollDown-Disabled"><Size><AbsDimension x="24" y="24" /></Size><Anchors><Anchor point="RIGHT" /></Anchors></DisabledTexture>
+	  <HighlightTexture name="$parentHighlightTexture" file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"><Size><AbsDimension x="24" y="24" /></Size><Anchors><Anchor point="RIGHT" /></Anchors></HighlightTexture>
+	</Button></Frames>
+	<Scripts>
+	  <OnLoad>self.AATestBarMainComboBox = true;</OnLoad>
+	  <OnHide>CloseDropDownMenus();</OnHide>
+	  <OnEnter>AATestToolTips["Enter"](self, "Select a Sound. This will be played as a WARNING sound.")</OnEnter>
+	  <OnLeave>AATestToolTips["Leave"]()</OnLeave>
+	</Scripts>
+      </Button>
+
+      <Button name="AATestFrameSelectMenuButton" >
+	<Size>
+	  <AbsDimension x="350" y="32" />
+	</Size>
+	<Anchors>
+	  <Anchor point="TOPLEFT">
+	    <Offset>
+	      <AbsDimension x="0" y="-40" />
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+	<Layers><Layer>
+	  <Texture name="$parentLeft" file="Interface\Glues\CharacterCreate\CharacterCreate-LabelFrame">
+	    <Size>
+	      <AbsDimension x="25" y="64" />
+	    </Size>
+	    <Anchors>
+	      <Anchor point="TOPLEFT">
+		<Offset>
+		  <AbsDimension x="0" y="13" />
+		</Offset>
+	      </Anchor>
+	    </Anchors>
+	    <TexCoords left="0" right="0.1953125" top="0" bottom="1" />
+	  </Texture>
+	  <Texture name="$parentMiddle" file="Interface\Glues\CharacterCreate\CharacterCreate-LabelFrame">
+	    <Size>
+	      <AbsDimension x="270" y="64" />
+	    </Size>
+	    <Anchors>
+	      <Anchor point="LEFT" relativeTo="$parentLeft" relativePoint="RIGHT" />
+	    </Anchors>
+	    <TexCoords left="0.1953125" right="0.8046875" top="0" bottom="1" />
+	  </Texture>
+	  <Texture name="$parentRight" file="Interface\Glues\CharacterCreate\CharacterCreate-LabelFrame">
+	    <Size>
+	      <AbsDimension x="25" y="64" />
+	    </Size>
+	    <Anchors>
+	      <Anchor point="LEFT" relativeTo="$parentMiddle" relativePoint="RIGHT" />
+	    </Anchors>
+	    <TexCoords left="0.8046875" right="1" top="0" bottom="1" />
+	  </Texture>
+	  <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Select an Expiration Sound..." justifyH="RIGHT">
+	    <Size>
+	      <AbsDimension x="245" y="10" />
+	    </Size>
+	    <Anchors>
+	      <Anchor point="RIGHT" relativeTo="$parentRight">
+		<Offset>
+		  <AbsDimension x="-43" y="2" />
+		</Offset>
+	      </Anchor>
+	    </Anchors>
+	    <FontHeight>
+	      <AbsValue val="10" />
+	      </FontHeight>
+	      <Color r="1" g="1" b="1" />
+	      <Shadow>
+		<Color r="0" g="0" b="0" />
+		<Offset>
+		  <AbsDimension x="1" y="-1" />
+		</Offset>
+	      </Shadow>
+	  </FontString>
+	</Layer></Layers>
+
+	<Frames><Button name="$parentButton"> 
+	  <Size><AbsDimension x="24" y="24" /></Size>
+	  <Anchors><Anchor point="TOPRIGHT" relativeTo="$parentRight"><Offset><AbsDimension x="-16" y="-18" /></Offset></Anchor></Anchors>
+	  <Scripts><OnClick>ToggleDropDownMenu(1, nil, self:GetParent()); PlaySound("igMainMenuOptionCheckBoxOn")</OnClick></Scripts>
+	  <NormalTexture name="$parentNormalTexture" file="Interface\ChatFrame\UI-ChatIcon-ScrollDown-Up"><Size><AbsDimension x="24" y="24" /></Size><Anchors><Anchor point="RIGHT" /></Anchors></NormalTexture>
+	  <PushedTexture name="$parentPushedTexture" file="Interface\ChatFrame\UI-ChatIcon-ScrollDown-Down"><Size><AbsDimension x="24" y="24" /></Size><Anchors><Anchor point="RIGHT" /></Anchors></PushedTexture>
+	  <DisabledTexture name="$parentDisabledTexture" file="Interface\ChatFrame\UI-ChatIcon-ScrollDown-Disabled"><Size><AbsDimension x="24" y="24" /></Size><Anchors><Anchor point="RIGHT" /></Anchors></DisabledTexture>
+	  <HighlightTexture name="$parentHighlightTexture" file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"><Size><AbsDimension x="24" y="24" /></Size><Anchors><Anchor point="RIGHT" /></Anchors></HighlightTexture>
+	</Button></Frames>
+	<Scripts>
+	  <OnLoad>self.AATestBarMainMenuBox = true;</OnLoad>
+	  <OnHide>CloseDropDownMenus();</OnHide>
+	  <OnEnter>AATestToolTips["Enter"](self, "Select a Sound. This will be played as a EXPIRATION sound.")</OnEnter>
+	  <OnLeave>AATestToolTips["Leave"]()</OnLeave>
+	</Scripts>
+      </Button>
+
+<!-- Fiddle button -->
+      <Button name="AATestFrameTestMenuButton" inherits="UIDropDownMenuTemplate">
+	<Size>
+	  <AbsDimension x="750" y="32" />
+	</Size>
+	<Anchors>
+	  <Anchor point="TOPLEFT">
+	    <Offset>
+	      <AbsDimension x="0" y="-80" />
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+	<Scripts>
+	  <OnLoad>self.AATestFiddleMainMenuBox = true;</OnLoad>
+	  <OnHide>CloseDropDownMenus();</OnHide>
+	  <OnEnter>AATestToolTips["Enter"](self, "Select a Sound. This will be played as a DEATH sound.")</OnEnter>
+	  <OnLeave>AATestToolTips["Leave"]()</OnLeave>
+	</Scripts>
+      </Button>
+
+      <Button name="AATestFrameTestMenuButton2" inherits="UIDropDownMenuTemplate">
+	<Size>
+	  <AbsDimension x="350" y="32" />
+	</Size>
+	<Anchors>
+	  <Anchor point="TOPLEFT">
+	    <Offset>
+	      <AbsDimension x="0" y="-120" />
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+	<Scripts>
+	  <OnLoad>self.AATestFiddleMainMenuBox2 = true;</OnLoad>
+	  <OnHide>CloseDropDownMenus();</OnHide>
+	  <OnEnter>AATestToolTips["Enter"](self, "Select a Sound. This will be played as an ARF sound.")</OnEnter>
+	  <OnLeave>AATestToolTips["Leave"]()</OnLeave>
+	</Scripts>
+      </Button>
+
+    </Frames>
+  </Frame>
+
+  <Frame name="AATestMenuFrame">
+    <Frames>
+      <Button name="AATestMenuFrameButton1" inherits="UIDropDownMenuTemplate">
+	<Size>
+	  <AbsDimension x="350" y="32" />
+	</Size>
+	<Anchors>
+	  <Anchor point="TOPLEFT">
+	    <Offset>
+	      <AbsDimension x="0" y="-60" />
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+	<Scripts>
+	  <OnLoad>self.AATestFiddle2 = true;</OnLoad>
+	  <OnHide>CloseDropDownMenus();</OnHide>
+	  <OnEnter>AATestToolTips["Enter"](self, "Select a Sound. This will be played as an BARF sound.")</OnEnter>
+	  <OnLeave>AATestToolTips["Leave"]()</OnLeave>
+	</Scripts>
+      </Button>
+    </Frames>
+  </Frame>
+</Ui>
